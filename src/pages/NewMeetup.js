@@ -15,8 +15,7 @@ function NewMeetupPage() {
       }
     }).then(() => {
       
-    }).catch(err => {
-      console.error(err)
+    }).catch(() => {
       // Using push would navigate the user and also allow them to use th back button
       // to return to current page. This is not what we want in this case, so we use
       // replace. If user presses back now, they will be returned to page before submitted form.
