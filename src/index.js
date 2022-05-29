@@ -4,7 +4,9 @@ import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 import App from './App';
+import { FavoritesContextProvider } from './store/favorites-context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<BrowserRouter><App /></BrowserRouter>);
+// Wrap context around all component which need access to the store.
+root.render(<FavoritesContextProvider><BrowserRouter><App /></BrowserRouter></FavoritesContextProvider>);
 
